@@ -12,6 +12,6 @@
 <title>List Appointment</title>
 </head>
 <body>
-<jsp:forward page="/AppointmentControllerA?action=listAppA "/>
+<jsp:forward page="/AppointmentServletA?action=listAppA "/>
 </body>
 </html>

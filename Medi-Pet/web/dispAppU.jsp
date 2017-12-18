@@ -12,7 +12,7 @@
 <title>List Appointment</title>
 </head>
 <body>
-<jsp:forward page="/AppointmentControllerU?action=listAppU "/>
+<jsp:forward page="/AppointmentServletU?action=listAppU "/>
 </body>
 </html>
 

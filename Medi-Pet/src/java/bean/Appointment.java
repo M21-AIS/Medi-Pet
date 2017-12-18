@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package appointment;
+package bean;
 
 /**
  *
@@ -15,7 +15,7 @@ public class Appointment
     private String date;
     private String time;
     private String typeVacc;
-    private String username;
+    private String fullname;
     private String name;
 
     public String getAppNo() {
@@ -50,12 +50,12 @@ public class Appointment
         this.typeVacc = typeVacc;
     }
 
-    public String getUsername() {
-        return username;
+    public String getFullname() {
+        return fullname;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
     }
 
     public String getName() {

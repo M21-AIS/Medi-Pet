@@ -41,7 +41,6 @@ public class PetDAO {
             preparedStatement.setString(4, pet.getBreed());
             preparedStatement.setString(5, pet.getFullname());
             preparedStatement.executeUpdate();
-
         } catch (SQLException e) {
             e.printStackTrace();
         }

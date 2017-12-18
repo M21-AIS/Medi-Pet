@@ -140,7 +140,7 @@ table:hover {
                                     <th>Sex</th>
                                     <th>Breed</th>
                                     <th>Owner Name</th>
-                                    <th colspan="2">Action</th>
+                                    <th colspan="3">Action</th>
                                   </tr>
                                 </thead>
                                 <c:forEach items="${pets}" var="pet">
@@ -153,6 +153,7 @@ table:hover {
                                     <td><c:out value="${pet.fullname}" /></td>
                                     <td><a href="APetServlet?action=edit&petId=<c:out value="${pet.petid}"/>">Edit</a></td>
                                     <td><a href="APetServlet?action=delete&petId=<c:out value="${pet.petid}"/>">Delete</a></td>
+                                    <td><a href="AppointmentServletA?action=insert"<c:out value="${app.appNo}"/>">Set Appointment</a></td>
                                     </tr>
                                 </c:forEach>
                                 </tr>

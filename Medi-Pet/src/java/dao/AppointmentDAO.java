@@ -1,24 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package appointment;
+package dao;
 
 import java.sql.*;
 import java.util.*;
 
-import appointment.Appointment;
+import bean.Appointment;
 import util.DBUtil;
-
+ 
 public class AppointmentDAO {
- private Connection connection;
+ 
+    private Connection connection;
  
     public AppointmentDAO() {
         connection = DBUtil.getConnection();
     }
  
-    public void checkApp (Appointment app) {
+    public void checkApp(Appointment app) {
         try {
             PreparedStatement ps = connection.prepareStatement("select appNo from appointment where appNo = ?");
             ps.setString(1, app.getAppNo());
@@ -36,14 +32,14 @@ public class AppointmentDAO {
     
     public void addApp(Appointment app) {
         try {
-            PreparedStatement preparedStatement = connection
-                    .prepareStatement("insert into appointment(appNo,date,time,typeVacc,username,name) values (?, ?, ?, ?, ?, ? )");
+            String query = "insert into appointment(appNo, date, time, typeVacc , fullname,name) values (?, ?, ?, ?, ?, ? )";
+            PreparedStatement preparedStatement = connection.prepareStatement( query );
             // Parameters start with 1
             preparedStatement.setString(1, app.getAppNo());
             preparedStatement.setString(2, app.getDate());
             preparedStatement.setString(3, app.getTime());
-            preparedStatement.setString(4, app.getTypeVacc());
-            preparedStatement.setString(5, app.getUsername());
+            preparedStatement.setString(4, app.getTypeVacc());          
+            preparedStatement.setString(5, app.getFullname());
             preparedStatement.setString(6, app.getName());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
@@ -64,18 +60,19 @@ public class AppointmentDAO {
         }
     }
 
-    public void updateApp (Appointment app) {
+    public void updateApp(Appointment app) {
         try {
             PreparedStatement preparedStatement = connection
-                    .prepareStatement("update appointment set date=?,time=?, typeVacc=?, username=?, name=? where appNo=?");
+                    .prepareStatement("update appointment set name=?, date=?, time=?, typeVacc=?, fullname=? where appNo=?");
             // Parameters start with 1
-            preparedStatement.setString(1, app.getDate());
-            preparedStatement.setString(2, app.getTime());
-            preparedStatement.setString(3, app.getTypeVacc());
-            preparedStatement.setString(4, app.getUsername());
-            preparedStatement.setString(5, app.getName());
+            preparedStatement.setString(1, app.getName());
+            preparedStatement.setString(2, app.getDate());
+            preparedStatement.setString(3, app.getTime());
+            preparedStatement.setString(4, app.getTypeVacc());
+            preparedStatement.setString(5, app.getFullname());
             preparedStatement.setString(6, app.getAppNo());
             preparedStatement.executeUpdate();
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -91,9 +88,9 @@ public class AppointmentDAO {
                 app.setAppNo(rs.getString("appNo"));
                 app.setDate(rs.getString("date"));
                 app.setTime(rs.getString("time"));
-                app.setTypeVacc(rs.getString("typeVacc"));
-                app.setUsername(rs.getString("username"));
-                app.setName(rs.getString("name"));          
+                app.setTypeVacc(rs.getString("typeVacc"));               
+                app.setFullname(rs.getString("fullname"));
+                app.setName(rs.getString("name"));
                 apps.add(app);
             }
         } catch (SQLException e) {
@@ -111,12 +108,12 @@ public class AppointmentDAO {
             ResultSet rs = preparedStatement.executeQuery();
 
             if (rs.next()) {
-                app.setAppNo(rs.getString("appNo"));
+                app.setAppNo(rs.getString("appNo"));               
                 app.setDate(rs.getString("date"));
                 app.setTime(rs.getString("time"));
                 app.setTypeVacc(rs.getString("typeVacc"));
-                app.setUsername(rs.getString("username"));
                 app.setName(rs.getString("name"));
+                app.setFullname(rs.getString("fullname"));
             }
         } catch (SQLException e) {
             e.printStackTrace();

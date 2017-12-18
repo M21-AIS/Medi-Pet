@@ -1,30 +1,29 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package appointment;
+package servlet;
 
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import appointment.Appointment;
-import appointment.AppointmentDAO;
+import bean.Appointment;
+import bean.Appointment;
+import dao.AppointmentDAO;
+import dao.AppointmentDAO;
 import util.DBUtil;
 import javax.servlet.RequestDispatcher;
 
-public class AppointmentControllerA extends HttpServlet {
+
+public class AppointmentServletU extends HttpServlet {
  private static final long serialVersionUID = 1L;
-    private static String INSERT_OR_EDIT = "/appointmentA.jsp";
-    private static String LIST_APP = "/listAppA.jsp";
+    private static String LIST_APP = "/listAppU.jsp";
+
     private AppointmentDAO dao;
 
-    public AppointmentControllerA() {
+    public AppointmentServletU() {
         super();
         dao = new AppointmentDAO();
     }
@@ -33,21 +32,13 @@ public class AppointmentControllerA extends HttpServlet {
         String forward="";
         String action = request.getParameter("action");
 
-        if (action.equalsIgnoreCase("delete")){
-            String appNo = request.getParameter("appNo");
-            dao.deleteApp(appNo);
-            forward = LIST_APP;
-            request.setAttribute("apps", dao.getAllApp());    
-        } else if(action.equalsIgnoreCase("edit")){
-            forward = INSERT_OR_EDIT;
-            String appNo = request.getParameter("appNo");
-            Appointment app = dao.getAppByAppNo(appNo);
-            request.setAttribute("app", app);
-        } else if (action.equalsIgnoreCase("listAppA")){
+        if (action.equalsIgnoreCase("listAppU"))
+        {
             forward = LIST_APP;
             request.setAttribute("apps", dao.getAllApp());
-        } else {
-            forward = INSERT_OR_EDIT;
+        } else
+        {
+            forward = LIST_APP;
         }
 
         RequestDispatcher view = request.getRequestDispatcher(forward);
@@ -60,7 +51,7 @@ public class AppointmentControllerA extends HttpServlet {
         app.setDate(request.getParameter("date"));
         app.setTime(request.getParameter("time"));
         app.setTypeVacc(request.getParameter("typeVacc"));
-        app.setUsername(request.getParameter("username"));
+        app.setFullname(request.getParameter("fullname"));
         app.setName(request.getParameter("name"));
         
         String appNo = request.getParameter("appNo");
