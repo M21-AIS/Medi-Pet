@@ -161,12 +161,12 @@ span {
                                                         <div class="form-group">
 							<label for="typeVacc" class="col-sm-2 control-label">Type of Vaccines<span>*</span></label>
 							<div class="col-sm-8">
-                                                           <p><input type="radio"  name="typeVacc" id="typeVacc" value="<c:out value="${app.typeVacc}"/>">Live Vaccines<br>&nbsp;&nbsp;
-                                                            <input type="radio" name="typeVacc" id="typeVacc" value="<c:out value="${app.typeVacc}"/>">Killed Vaccines<br>&nbsp;&nbsp;
-                                                            <input type="radio" name="typeVacc" id="typeVacc" value="<c:out value="${app.typeVacc}"/>">Subunit Vaccines<br>&nbsp;&nbsp;
-                                                            <input type="radio" name="typeVacc" id="typeVacc" value="<c:out value="${app.typeVacc}"/>">Recombinant Vaccines<br>&nbsp;&nbsp;
-                                                            <input type="radio" name="typeVacc" id="typeVacc" value="<c:out value="${app.typeVacc}"/>">Anti-idiotype antibodies<br>&nbsp;&nbsp;
-                                                            <input type="radio" name="typeVacc" id="typeVacc" value="<c:out value="${app.typeVacc}"/>">DNA Vaccines</p>
+                                                           <p><input type="radio" name="typeVacc" value="Live Vaccines" id="typeVacc" value="<c:out value="${app.typeVacc}"/>">Live Vaccines<br>&nbsp;&nbsp;
+                                                            <input type="radio" name="typeVacc" value="Killed Vaccines" id="typeVacc" value="<c:out value="${app.typeVacc}"/>">Killed Vaccines<br>&nbsp;&nbsp;
+                                                            <input type="radio" name="typeVacc" value="Subunit Vaccines" id="typeVacc" value="<c:out value="${app.typeVacc}"/>">Subunit Vaccines<br>&nbsp;&nbsp;
+                                                            <input type="radio" name="typeVacc" value="Recombinant Vaccines" id="typeVacc" value="<c:out value="${app.typeVacc}"/>">Recombinant Vaccines<br>&nbsp;&nbsp;
+                                                            <input type="radio" name="typeVacc" value="Anti-idiotype antibodies" id="typeVacc" value="<c:out value="${app.typeVacc}"/>">Anti-idiotype antibodies<br>&nbsp;&nbsp;
+                                                            <input type="radio" name="typeVacc" value="DNA Vaccines" id="typeVacc" value="<c:out value="${app.typeVacc}"/>">DNA Vaccines</p>
                                                         </div>
                                                         </div>
                                                         <div class="form-group">

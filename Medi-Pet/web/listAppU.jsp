@@ -140,7 +140,7 @@ table:hover {
                                     <th>Time</th>
                                     <th>Type of Vaccines</th>
                                     <th>Owner Name</th>
-                                    <th colspan="3">Action</th>
+                                    
                                   </tr>
                                 </thead>
                                 <c:forEach items="${apps}" var="app">
