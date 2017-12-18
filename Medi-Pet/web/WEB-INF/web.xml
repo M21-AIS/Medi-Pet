@@ -4,13 +4,13 @@
     <session-config>
         <session-timeout>10</session-timeout>
     </session-config>
-    <welcome-file-list> 
+    <welcome-file-list>
         <welcome-file>/index.jsp</welcome-file>
     </welcome-file-list>
     <servlet>
         <display-name>RegisterServlet</display-name>
         <servlet-name>RegisterServlet</servlet-name>
-        <servlet-class>register.RegisterServlet</servlet-class>
+        <servlet-class>servlet.RegisterServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
@@ -19,13 +19,13 @@
     <servlet>
         <display-name>LoginServlet</display-name>
         <servlet-name>LoginServlet</servlet-name>
-        <servlet-class>login.LoginServlet</servlet-class>
+        <servlet-class>servlet.LoginServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet</url-pattern>
     </servlet-mapping>
-    <welcome-file-list> 
+    <welcome-file-list>
         <welcome-file>/dispAPet.jsp</welcome-file>
     </welcome-file-list>
     <welcome-file-list>
@@ -34,7 +34,7 @@
     <servlet>
         <display-name>LogoutServlet</display-name>
         <servlet-name>LogoutServlet</servlet-name>
-        <servlet-class>login.LogoutServlet</servlet-class>
+        <servlet-class>servlet.LogoutServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>LogoutServlet</servlet-name>
@@ -42,11 +42,20 @@
     </servlet-mapping>
     <servlet>
         <description/>
-        <servlet-name>PetController</servlet-name>
-        <servlet-class>pet.APetController</servlet-class>
+        <servlet-name>APetServlet</servlet-name>
+        <servlet-class>servlet.APetServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>PetController</servlet-name>
-        <url-pattern>/PetController</url-pattern>
+        <servlet-name>APetServlet</servlet-name>
+        <url-pattern>/APetServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <description/>
+        <servlet-name>UPetServlet</servlet-name>
+        <servlet-class>servlet.UPetServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UPetServlet</servlet-name>
+        <url-pattern>/UPetServlet</url-pattern>
     </servlet-mapping>
 </web-app>

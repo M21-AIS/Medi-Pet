@@ -9,9 +9,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Insert pet here</title>
+<title>Pet List</title>
 </head>
 <body>
-<jsp:forward page="/PetController?action=listAPet "/>
+<jsp:forward page="/APetServlet?action=listAPet "/>
 </body>
 </html>

@@ -1,9 +1,9 @@
-package pet;
+package dao;
 
 import java.sql.*;
 import java.util.*;
 
-import pet.Pet;
+import bean.Pet;
 import util.DBUtil;
  
 public class PetDAO {

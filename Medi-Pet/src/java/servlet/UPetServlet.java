@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pet;
+package servlet;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -15,16 +15,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import pet.PetDAO;
-import pet.Pet;
+import dao.PetDAO;
+import bean.Pet;
 
-public class UPetController extends HttpServlet {
+public class UPetServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private static String INSERT_OR_EDIT = "/petU.jsp";
     private static String LIST_PET = "/listUPet.jsp";
     private PetDAO dao;
 
-    public UPetController() {
+    public UPetServlet() {
         super();
         dao = new PetDAO();
     }
@@ -43,12 +43,12 @@ public class UPetController extends HttpServlet {
             int petId = Integer.parseInt(request.getParameter("petId"));
             Pet pet = dao.getPetById(petId);
             request.setAttribute("pet", pet);
-        } else if (action.equalsIgnoreCase("listUPet")){
-            forward = LIST_PET;
-            request.setAttribute("pets", dao.getAllPets());
-        } else {
+        } else if( action.equalsIgnoreCase( "insert" ) ) {
             forward = INSERT_OR_EDIT;
-        }
+	} else {
+            forward = LIST_PET;
+            request.setAttribute("pets", dao.getAllPets() );
+	}
 
         RequestDispatcher view = request.getRequestDispatcher(forward);
         view.forward(request, response);

@@ -1,4 +1,4 @@
-package login;
+package dao;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -11,7 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
  
-import login.Login;
+import bean.Login;
 import util.DBUtil;
  
 public class LoginDAO {

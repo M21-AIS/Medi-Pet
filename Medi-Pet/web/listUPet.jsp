@@ -116,15 +116,15 @@ table th {
  	<td data-label="Date of Birth"><c:out value="${pet.dob}" /></td>
 	<td data-label="Sex"><c:out value="${pet.sex}" /></td>
 	<td data-label="Breed"><c:out value="${pet.breed}" /></td>
-        <td data-label="Owner Name"><c:out value="${pet.fullName}" /></td>
-	<td data-label="Action"><a href="PetController?action=edit&petId=<c:out value="${pet.petid}"/>">Edit</a></td>
+        <td data-label="Owner Name"><c:out value="${pet.fullname}" /></td>
+	<td data-label="Action"><a href="UPetServlet?action=edit&petId=<c:out value="${pet.petid}"/>">Edit</a></td>
         </tr>
     </c:forEach>
     </tbody>
     </table>
         
         <br><br>
-        <center><button><a href="PetController?action=insert">Add Pet</a></button></center>
+        <center><button><a href="UPetServlet?action=insert">Add Pet</a></button></center>
     </div>
   
 </body>

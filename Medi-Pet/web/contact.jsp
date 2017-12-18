@@ -25,24 +25,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </head>
 <body> 
 	<!-- banner -->
-	<div class="w3ls-banner about-w3lsbanner">
+	<div class="w3ls-banner jarallax">
 		<div class="w3lsbanner-info">
 			<!-- header -->
 			<div class="header">
 				<div class="container">   
 					<div class="agile_header_grid"> 
-						<div class="header-mdl agileits-logo"> 
-							<h1><a href="index.html">Best Pets</a></h1> 
+						<div class="header-mdl agileits-logo"><!-- header-two --> 
+							<h1><a href="index.jsp">Medi Pet</a></h1> 
 						</div>
 						<div class="agileits_w3layouts_sign_in">
 							<ul>
 								<li><a href="#myModal2" data-toggle="modal" class="play-icon">Login</a></li>
-								<li>Call us : <span>(+00) 123 234</span></li>
+								<li>Call us : <span>(+07) 553 0070</span></li>
 							</ul>
 						</div>
 						<div class="clearfix"> </div>
 					</div> 
-					<div class="header-nav"><!-- header-two --> 	
+					<div class="header-nav"><!-- header-three --> 	
 						<nav class="navbar navbar-default">
 							<div class="navbar-header">
 								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -55,16 +55,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<!-- top-nav -->
 							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 								<ul class="nav navbar-nav cl-effect-16">
-									<li><a href="index.html" data-hover="Home">Home</a></li>
+									<li><a href="index.jsp" class="active" data-hover="Home">Home</a></li>
 									<li><a href="about.html" data-hover="About">About</a></li> 
-									<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages <span class="caret"></span></a>
-										<ul class="dropdown-menu">
-											<li><a href="icons.html" data-hover="Web Icons">Web Icons</a></li>
-											<li><a href="codes.html" data-hover="Short Codes">Short Codes</a></li>
-										</ul>
-									</li> 
 									<li><a href="gallery.html" data-hover="Gallery">Gallery</a></li>
-									<li><a href="contact.html" class="active" data-hover="Contact">Contact</a></li>
+									<li><a href="contact.jsp" data-hover="Contact">Contact</a></li>
 								</ul>  
 								<div class="clearfix"> </div>	
 							</div>
@@ -87,7 +81,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 					<div class="col-xs-10 address-right">
 						<h5>Visit Us</h5>
-						<p>Bmr St, Canada, New York, USA</p>
+						<p>M21, UTM Skudai, Johor, Malaysia</p>
 					</div>
 					<div class="clearfix"> </div>
 				</div>
@@ -97,7 +91,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 					<div class="col-xs-10 address-right">
 						<h5>Mail Us</h5>
-						<p><a href="mailto:info@example.com"> mail@example.com</a></p>
+						<p><a href="mailto:medipet@gmail.com"> medipet@gmail.com</a></p>
 					</div>
 					<div class="clearfix"> </div>
 				</div>
@@ -128,14 +122,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</div>  
 	<!-- //contact --> 
 	<div class="map">
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24174.906176932098!2d-73.98255489041246!3d40.765031876857535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258bf12dbe975%3A0xf6bac5dd7bc5f711!2sPookie+and+Sebastian!5e0!3m2!1sen!2sin!4v1482923320436"></iframe> 
-	</div> 
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15953.369651609222!2d103.6381827!3d1.55849!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8c133d77584b5ff8!2sUniversiti+Teknologi+Malaysia!5e0!3m2!1sen!2smy!4v1513520610602" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></iframe>	</div> 
 	<!-- news letter -->
 	<div class="subscribe jarallax">
 		<div class="sub-agileinfo">
 			<div class="container">
 				<h3 class="agileits-title w3title1">Get our free newsletter</h3>
-				<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est consectetur adipisci velit sed quia non numquam eius.</p>
+				<p>Get our latest promotion, events and news.</p>
 				<form>
 					<input type="email" name="email" placeholder="Email Address" class="user" required="">
 					<input type="submit" value="Subscribe">
@@ -152,39 +145,26 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="footer-grids">
 					<div class="col-md-3 col-sm-6 footer-logo">
 						<div class="agileits-logo"> 
-							<h2><a href="index.html">Best Pets</a></h2>
+							<h2><a href="index.jsp">Medi Pet</a></h2> 
 						</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget egestas erat. In hac habitasse platea dictumst.</p>
+						<p>Place where you can pamper your pet.</p>
 					</div>
 					<div class="col-md-3 col-sm-6 footer-grid">
 						<h3>Navigation</h3>
 						<ul>
-							<li><a href="index.html">Home</a> </li>
+							<li><a href="index.jsp">Home</a> </li>
 							<li><a href="about.html">About</a></li> 
 							<li><a href="gallery.html">Gallery</a></li>
-							<li><a href="icons.html">Web Icons</a></li>
-							<li><a href="codes.html">Short Codes</a></li>
-							<li><a href="contact.html">Contact</a></li>
-						</ul>
-					</div>
-					<div class="col-md-3 col-sm-6 footer-list">
-						<h3>Latest Posts</h3>
-						<ul>
-							<li><i class="fa fa-arrow-right" aria-hidden="true"></i> Vestibulum ante ipsum</li>
-							<li><i class="fa fa-arrow-right" aria-hidden="true"></i> Phasellus at eros</li>
-							<li><i class="fa fa-arrow-right" aria-hidden="true"></i> Mauris eleifend aliquet</li>
-							<li><i class="fa fa-arrow-right" aria-hidden="true"></i> Aliquam vitae tristique</li>
-							<li><i class="fa fa-arrow-right" aria-hidden="true"></i> Pellentesque lobortis</li>
-							<li><i class="fa fa-arrow-right" aria-hidden="true"></i> Class aptent taciti</li>
+							<li><a href="icons.html">Service</a></li>
+							<li><a href="codes.html">Appointment</a></li>
+							<li><a href="contact.jsp">Contact</a></li>
 						</ul>
 					</div>
 					<div class="col-md-3 col-sm-6 footer-grid">
 						<h3>Twitter Posts</h3>
 						<ul class="w3agile_footer_grid_list">
-							<li>Ut aut reiciendis voluptatibus <a href="#">http://example.com</a> alias, ut aut.
+							<li>New pet sign in to our branch <a href="#">http://news.com</a> today.
 								<span><i class="fa fa-twitter" aria-hidden="true"></i> 02 days ago</span></li>
-							<li>Itaque earum rerum hic tenetur a sapiente <a href="#">http://example.com</a> ut aut.
-							<span><i class="fa fa-twitter" aria-hidden="true"></i> 03 days ago</span></li>
 						</ul>
 					</div>
 					<div class="clearfix"> </div>
@@ -193,7 +173,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</div>
 		<div class="footer-bottom">
 			<div class="container">
-				<p>© 2017 Best Pets. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+				<p>© 2017 Medi Pet. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
 			</div>
 		</div>
 	</div>

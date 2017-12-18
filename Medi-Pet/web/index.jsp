@@ -94,12 +94,6 @@ function validate()
 								<ul class="nav navbar-nav cl-effect-16">
 									<li><a href="index.jsp" class="active" data-hover="Home">Home</a></li>
 									<li><a href="about.html" data-hover="About">About</a></li> 
-									<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages <span class="caret"></span></a>
-										<ul class="dropdown-menu">
-											<li><a href="icons.html" data-hover="Web Icons">Product</a></li>
-											<li><a href="codes.html" data-hover="Short Codes">Service</a></li>
-										</ul>
-									</li> 
 									<li><a href="gallery.html" data-hover="Gallery">Gallery</a></li>
 									<li><a href="contact.jsp" data-hover="Contact">Contact</a></li>
 								</ul>  
@@ -118,8 +112,8 @@ function validate()
 							<h6> Have a good day ! </h6>
 							<div id="typed-strings" class="agileits_w3layouts_strings">
 								<p>Welcome to<i> Medi Pet</i></p>
-								<p><i>Place</i> where</p>
-								<p>You Can Pamper <i>Your Pets</i></p>
+								<p><i>Place</i> where you</p>
+								<p>Can Pamper <i>Your Pets</i></p>
 							</div>
 							<span id="typed" style="white-space:pre;"></span>
 						</div>
@@ -150,7 +144,7 @@ function validate()
 					</div>
 					<div class="col-xs-8 wthree_banner_bottom_grid_right">	
 						<h4>Free Consultation</h4>
-						<p>Morbi viverra lacus commodo felis semper, eu iaculis lectus feugiat.</p>
+						<p>Ask anything that you curious about.</p>
 					</div>
 					<div class="clearfix"> </div>
 				</div>
@@ -166,7 +160,7 @@ function validate()
 					</div>
 					<div class="col-xs-8 wthree_banner_bottom_grid_right">	
 						<h4>Certified Products</h4>
-						<p>Morbi viverra lacus commodo felis semper, eu iaculis lectus feugiat.</p>
+						<p>Our products are certified by Ministry of Health.</p>
 					</div>
 					<div class="clearfix"> </div>
 				</div>
@@ -182,7 +176,7 @@ function validate()
 					</div>
 					<div class="col-xs-8 wthree_banner_bottom_grid_right">	
 						<h4>Free Helpline</h4>
-						<p>Morbi viverra lacus commodo felis semper, eu iaculis lectus feugiat.</p>
+						<p>Get through us directly from the number.</p>
 					</div>
 					<div class="clearfix"> </div>
 				</div>
@@ -218,9 +212,12 @@ function validate()
 			<div class="col-md-6 w3ls_welcome_left"> 
 				<div class="w3ls_welcome_right1">
 					<h3 class="agileits-title">About Us</h3>
-					<h6>Lorem ipsum dolor <span> Consectetur </span> sit amet adipisicing elit. </h6>
-					<p>Quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p>
-					<div class="w3l_more">
+					<h6>At <span> MEDI PET </span>, our vision is to create a fun and exciting market place for all pet loving people to interact and express their care and thoughts for their pets. </h6>
+					<p>MEDI PET runs fully integrated pet supplies and pet care stores; it envisions being the nationwide leader in pet specialty. In the states of Johor, we are the leading specialty retailer 
+                                           of premium pet food, supplies and services with a commitment to quality humane animal care and education. Our strategy is to offer our customers a complete assortment of pet supplies at 
+                                           affordable prices, with superior levels of pet care services at convenient locations, by hiring pet lovers as ambassadors to guide our customers in adopting and living a quality pet loving lifestyles.</p>
+					  
+                                        <div class="w3l_more">
 						<a href="#" class="button button--nina" data-text="Learn more" data-toggle="modal" data-target="#myModal">
 							<span>L</span><span>e</span><span>a</span><span>n</span> <span>m</span><span>o</span><span>r</span><span>e</span>
 						</a>
@@ -235,27 +232,27 @@ function validate()
 	<!-- services --> 
 	<div class="services jarallax">
 		<div class="container">   
-			<h3 class="agileits-title w3title1">Our Services</h3>
+			<h3 class="agileits-title w3title1">Add-On Details</h3>
 			<div class="services-w3ls-row">
 				<div class="col-md-3 col-sm-3 col-xs-6 services-grid agileits-w3layouts">
 					<span class="glyphicon glyphicon-home effect-1" aria-hidden="true"></span>
-					<h5>Lorem ipsum</h5>
-					<p>Itaque earum rerum hic a sapiente delectus in auctor sapien.</p>
+					<h5>Branches</h5>
+					<p>Find us on Medi Pet Branches.</p>
 				</div>
 				<div class="col-md-3 col-sm-3 col-xs-6 services-grid agileits-w3layouts">
 					<span class="glyphicon glyphicon-list-alt effect-1" aria-hidden="true"></span>
-					<h5>Ut non lacus</h5>
-					<p>Itaque earum rerum hic a sapiente delectus in auctor sapien.</p>
+					<h5>Media</h5>
+					<p>Read more about Medi Pet news. </p>
 				</div>
 				<div class="col-md-3 col-sm-3 col-xs-6 services-grid agileits-w3layouts">
 					<span class="glyphicon glyphicon-tree-deciduous effect-1" aria-hidden="true"></span>
-					<h5>Maec rutrum</h5>
-					<p>Itaque earum rerum hic a sapiente delectus in auctor sapien.</p>
+					<h5>Course</h5>
+					<p>Discover more about Medi Pet course.</p>
 				</div>
 				<div class="col-md-3 col-sm-3 col-xs-6 services-grid">
 					<span class="glyphicon glyphicon-globe effect-1" aria-hidden="true"></span>
-					<h5>Phase gravida</h5>
-					<p>Itaque earum rerum hic a sapiente delectus in auctor sapien.</p>
+					<h5>Global</h5>
+					<p>Coming soon...</p>
 				</div> 
 				<div class="clearfix"> </div>
 			</div>  
@@ -269,11 +266,9 @@ function validate()
 				<img src="images/s1.jpg" alt=" " class="img-responsive" />
 			</div>
 			<div class="col-sm-7 w3_agile_blog_bottom_right">
-				<h5>Best Pets</h5>
+				<h5>Medi Pet</h5>
 				<h3>24/7 Customer Service Support</h3>
-				<p>Pellentesque accumsan cursus dui, sodales blandit urna sodales vitae. 
-					Maecenas placerat eget mi vitae euismod. Duis aliquam efficitur mi, 
-					et eleifend velit.</p>
+				<p>Hearing your problem whenever you need, contact our support directly.</p>
 				<div class="w3l_more">
 					<a href="#" class="button button--nina" data-text="Learn more" data-toggle="modal" data-target="#myModal">
 						<span>L</span><span>e</span><span>a</span><span>n</span> <span>m</span><span>o</span><span>r</span><span>e</span>
@@ -289,7 +284,7 @@ function validate()
 		<div class="sub-agileinfo">
 			<div class="container">
 				<h3 class="agileits-title w3title1">Get our free newsletter</h3>
-				<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est consectetur adipisci velit sed quia non numquam eius.</p>
+				<p>Get our latest promotion, events and news.</p>
 				<form>
 					<input type="email" name="email" placeholder="Email Address" class="user" required="">
 					<input type="submit" value="Subscribe">
@@ -306,39 +301,26 @@ function validate()
 				<div class="footer-grids">
 					<div class="col-md-3 col-sm-6 footer-logo">
 						<div class="agileits-logo"> 
-							<h2><a href="index.html">Best Pets</a></h2> 
+							<h2><a href="index.jsp">Medi Pet</a></h2> 
 						</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget egestas erat. In hac habitasse platea dictumst.</p>
+						<p>Place where you can pamper your pet.</p>
 					</div>
 					<div class="col-md-3 col-sm-6 footer-grid">
 						<h3>Navigation</h3>
 						<ul>
-							<li><a href="index.html">Home</a> </li>
+							<li><a href="index.jsp">Home</a> </li>
 							<li><a href="about.html">About</a></li> 
 							<li><a href="gallery.html">Gallery</a></li>
-							<li><a href="icons.html">Web Icons</a></li>
-							<li><a href="codes.html">Short Codes</a></li>
-							<li><a href="contact.html">Contact</a></li>
-						</ul>
-					</div>
-					<div class="col-md-3 col-sm-6 footer-list">
-						<h3>Latest Posts</h3>
-						<ul>
-							<li><i class="fa fa-arrow-right" aria-hidden="true"></i> Vestibulum ante ipsum</li>
-							<li><i class="fa fa-arrow-right" aria-hidden="true"></i> Phasellus at eros</li>
-							<li><i class="fa fa-arrow-right" aria-hidden="true"></i> Mauris eleifend aliquet</li>
-							<li><i class="fa fa-arrow-right" aria-hidden="true"></i> Aliquam vitae tristique</li>
-							<li><i class="fa fa-arrow-right" aria-hidden="true"></i> Pellentesque lobortis</li>
-							<li><i class="fa fa-arrow-right" aria-hidden="true"></i> Class aptent taciti</li>
+							<li><a href="icons.html">Service</a></li>
+							<li><a href="codes.html">Appointment</a></li>
+							<li><a href="contact.jsp">Contact</a></li>
 						</ul>
 					</div>
 					<div class="col-md-3 col-sm-6 footer-grid">
 						<h3>Twitter Posts</h3>
 						<ul class="w3agile_footer_grid_list">
-							<li>Ut aut reiciendis voluptatibus <a href="#">http://example.com</a> alias, ut aut.
+							<li>New pet sign in to our branch <a href="#">http://news.com</a> today.
 								<span><i class="fa fa-twitter" aria-hidden="true"></i> 02 days ago</span></li>
-							<li>Itaque earum rerum hic tenetur a sapiente <a href="#">http://example.com</a> ut aut.
-							<span><i class="fa fa-twitter" aria-hidden="true"></i> 03 days ago</span></li>
 						</ul>
 					</div>
 					<div class="clearfix"> </div>
@@ -347,7 +329,7 @@ function validate()
 		</div>
 		<div class="footer-bottom">
 			<div class="container">
-				<p>© 2017 Best Pets. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+				<p>© 2017 Medi Pet. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
 			</div>
 		</div>
 	</div>
@@ -361,8 +343,8 @@ function validate()
 				</div> 
 				<div class="modal-body modal-spa">
 					<img src="images/g2.jpg" class="img-responsive" alt=""/>
-					<h4>Consectetur adipiscing elit</h4>
-					<p>Donec fringilla lacus eu pretium rutrum. Cras aliquet congue ullamcorper. Etiam mattis eros eu ullamcorper volutpat. Proin ut dui a urna efficitur varius. uisque molestie cursus mi et congue consectetur adipiscing elit cras rutrum iaculis enim, Lorem ipsum dolor sit amet, non convallis felis mattis at. Maecenas sodales tortor ac ligula ultrices dictum et quis urna. Etiam pulvinar metus neque, eget porttitor massa vulputate in.<br> Fusce lacus purus, pulvinar ut lacinia id, sagittis eu mi. Vestibulum eleifend massa sem, eget dapibus turpis efficitur at. Aliquam viverra quis leo et efficitur. Nullam arcu risus, scelerisque quis interdum eget, fermentum viverra turpis. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut At vero eos </p>
+					<h4>More Information</h4>
+					<p>Founded as an independent pet supplies store in Skudai, Johor Bahru in 2010 and was an instant success. Global Pets has rapidly expanded to become a distinctive household brand that has established its mark as an integrated pet care specialty chain store. The company expanded its offerings by giving greater emphasis to pet care services and rolled out grooming and boarding services companywide. In our quest to offer our customers a more comprehensive pet care solution, we continue to explore and develop new service offerings especially in areas such as pet adoption, training and cremation. In the state of Johor, we are already the leading retailer of premium pet supplies and services. Our strategy is to offer our customers comprehensive pet care solutions at affordable prices, with superior levels of pet care supplies and services at convenient locations, and by hiring pet care specialists as ambassadors to guide our customers towards living a better quality pet loving lifestyles.</p>
 				</div> 
 			</div>
 		</div>
