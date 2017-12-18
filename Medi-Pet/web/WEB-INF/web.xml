@@ -32,10 +32,10 @@
         <welcome-file>/dispUPet.jsp</welcome-file>
     </welcome-file-list>
     <welcome-file-list>
-        <welcome-file>/dispAppU.jsp</welcome-file>
+        <welcome-file>/dispAppA.jsp</welcome-file>
     </welcome-file-list>
     <welcome-file-list>
-        <welcome-file>/dispAppA.jsp</welcome-file>
+        <welcome-file>/dispAppU.jsp</welcome-file>
     </welcome-file-list>
     <servlet>
         <display-name>LogoutServlet</display-name>

@@ -76,8 +76,23 @@ table:hover {
 							<h1><a href="index.jsp">Medi Pet</a></h1> 
 						</div>
 						<div class="agileits_w3layouts_sign_in">
+							<%
+                                                        String username=request.getParameter("username");
+                                                        String password=request.getParameter("password");
+                                                        String message= username;
+                                                        String rememberMe=  request.getParameter("rememberMe");
+                                                        if(rememberMe!=null)
+                                                        {
+                                                            Cookie usernameCookie = new Cookie("username-cookie", username);
+                                                            Cookie passwordCookie = new Cookie("password-cookie", username);
+                                                            usernameCookie.setMaxAge(24*60*60);
+                                                            passwordCookie.setMaxAge(24*60*60);
+                                                            response.addCookie(usernameCookie);
+                                                            response.addCookie(passwordCookie);
+                                                            }
+                                                        %>  
 							<ul>
-                                                            <li>Welcome <%=request.getAttribute("userName") %></li>
+                                                            <li>WELCOME : <%= message%></li>
                                                             <li>|</li>
                                                             <li><a href="<%=request.getContextPath()%>/LogoutServlet" data-toggle="modal" class="play-icon">Logout</a></li>
                                                             <li>Call us : <span>(+07) 553 0070</span></li>
@@ -144,7 +159,7 @@ table:hover {
                             </div>
 
                                 <br><br>
-                                <center><button type="submit" class="button"><a href="AppointmentServletA?action=insert">Set Appointment</a></button></center>
+                                <center><button type="submit" class="button"><a href="AppointmentServletU?action=insert">Set Appointment</a></button></center>
                                 </div>
   
                                 </center>

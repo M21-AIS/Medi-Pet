@@ -11,18 +11,18 @@ package bean;
  */
 public class Appointment 
 {
-    private String appNo;
+    private int appNo;
     private String date;
     private String time;
     private String typeVacc;
     private String fullname;
     private String name;
 
-    public String getAppNo() {
+    public int getAppNo() {
         return appNo;
     }
 
-    public void setAppNo(String appNo) {
+    public void setAppNo(int appNo) {
         this.appNo = appNo;
     }
 

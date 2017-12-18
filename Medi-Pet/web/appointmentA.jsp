@@ -77,8 +77,23 @@ span {
 							<h1><a href="index.jsp">Medi Pet</a></h1> 
 						</div>
 						<div class="agileits_w3layouts_sign_in">
+							<%
+                                                        String username=request.getParameter("username");
+                                                        String password=request.getParameter("password");
+                                                        String message= username;
+                                                        String rememberMe=  request.getParameter("rememberMe");
+                                                        if(rememberMe!=null)
+                                                        {
+                                                            Cookie usernameCookie = new Cookie("username-cookie", username);
+                                                            Cookie passwordCookie = new Cookie("password-cookie", username);
+                                                            usernameCookie.setMaxAge(24*60*60);
+                                                            passwordCookie.setMaxAge(24*60*60);
+                                                            response.addCookie(usernameCookie);
+                                                            response.addCookie(passwordCookie);
+                                                            }
+                                                        %>  
 							<ul>
-                                                            <li>Welcome <%=request.getAttribute("userName") %></li>
+                                                            <li>WELCOME : <%= message%></li>
                                                             <li>|</li>
                                                             <li><a href="<%=request.getContextPath()%>/LogoutServlet" data-toggle="modal" class="play-icon">Logout</a></li>
                                                             <li>Call us : <span>(+07) 553 0070</span></li>
@@ -122,7 +137,7 @@ span {
 							<div class="form-group">
 							<label for="appNo" class="col-sm-2 control-label">Appointment No</label>
 							<div class="col-sm-8">
-                                                            <input type="text" class="form-control1" name="appNo" id="appNo"  value="<c:out value="${app.appNo}"/>" placeholder="Appointment No">
+                                                            <input type="text" class="form-control1" name="appNo" id="appNo" readonly="readonly" value="<c:out value="${app.appNo}"/>" placeholder="Appointment No">
 							</div>
                                                         </div>
                                                         <div class="form-group">

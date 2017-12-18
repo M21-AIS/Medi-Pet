@@ -33,13 +33,13 @@ public class AppointmentServletA extends HttpServlet {
         String action = request.getParameter("action");
 
         if (action.equalsIgnoreCase("delete")){
-            String appNo = request.getParameter("appNo");
+            int appNo = Integer.parseInt(request.getParameter("appNo"));
             dao.deleteApp(appNo);
             forward = LIST_APP;
             request.setAttribute("apps", dao.getAllApp());    
         } else if(action.equalsIgnoreCase("edit")){
             forward = INSERT_OR_EDIT;
-            String appNo = request.getParameter("appNo");
+            int appNo = Integer.parseInt(request.getParameter("appNo"));
             Appointment app = dao.getAppByAppNo(appNo);
             request.setAttribute("app", app);
         } else if (action.equalsIgnoreCase("insert")){
@@ -55,7 +55,6 @@ public class AppointmentServletA extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Appointment app = new Appointment();
-        app.setAppNo(request.getParameter("appNo"));
         app.setDate(request.getParameter("date"));
         app.setTime(request.getParameter("time"));
         app.setTypeVacc(request.getParameter("typeVacc"));
@@ -63,13 +62,13 @@ public class AppointmentServletA extends HttpServlet {
         app.setName(request.getParameter("name"));
         
         String appNo = request.getParameter("appNo");
-        if( appNo.isEmpty())
+        if( appNo == null || appNo.isEmpty())
         {
             dao.addApp(app);
         }
         else
         {
-            app.setAppNo(request.getParameter(appNo));
+            app.setAppNo(Integer.parseInt(appNo));
             dao.checkApp(app);
         }
         RequestDispatcher view = request.getRequestDispatcher(LIST_APP);

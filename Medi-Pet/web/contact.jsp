@@ -101,12 +101,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 					<div class="col-xs-10 address-right">
 						<h5>Call Us</h5>
-						<p>+01 222 333 4444</p>
+                                                <p><a href = "http://www.wasap.my/+60112223344 ">+011 222 3344</a></p>
 					</div>
 					<div class="clearfix"> </div>
 				</div>   
 			</div>  
-			<form action="#" method="post">
+			<form action="" method="post">
 				<div class="col-sm-6 contact-left">
 					<input type="text" name="Name" placeholder="Your Name" required="">
 					<input type="email" name="Email" placeholder="Email" required="">
