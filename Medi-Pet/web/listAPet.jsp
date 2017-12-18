@@ -116,7 +116,7 @@ table:hover {
                                 <div class="w3-container w3-centered">
                                 <h1><center>Pet Information</center></h1>
                                 <br><br>
-                              <table class="w3-table w3-bordered">
+                              <table class="w3-table-all w3-hoverable">
                                 <thead>
                                   <tr class="w3-red">
                                     <th>Pet ID</th>
@@ -129,7 +129,7 @@ table:hover {
                                   </tr>
                                 </thead>
                                 <c:forEach items="${pets}" var="pet">
-                                    <tr class="w3-white">
+                                    <tr>
                                     <td><c:out value="${pet.petid}" /></td>
                                     <td><c:out value="${pet.name}" /></td>
                                     <td><c:out value="${pet.dob}" /></td>
