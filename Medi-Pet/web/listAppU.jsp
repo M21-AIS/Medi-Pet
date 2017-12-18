@@ -3,6 +3,8 @@
     Created on : Dec 13, 2017, 4:17:14 PM
     Author     : User
 --%>
+<%@page import="java.util.Iterator"%>
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
@@ -128,21 +130,35 @@ table:hover {
                                     
                                   </tr>
                                 </thead>
+                                 <%
+                                    int count = 0;
+                                    String color = "#F9EBB3";
+                                    if (request.getAttribute("fullname") != null) {
+                                        ArrayList al = (ArrayList) request.getAttribute("app");
+                                        System.out.println(al);
+                                        Iterator itr = al.iterator();
+                                        while (itr.hasNext()) {
+
+                                            if ((count % 2) == 0) {
+                                                color = "#eeffee";
+                                            }
+                                            count++;
+                                            ArrayList app = (ArrayList) itr.next();
+                                %>
                                     <tr class="w3-white">
-                                    <td><c:out value="${app.appNo}" /></td>
-                                    <td><c:out value="${app.name}" /></td>
-                                    <td><c:out value="${app.date}" /></td>
-                                    <td><c:out value="${app.time}" /></td>
-                                    <td><c:out value="${app.typeVacc}" /></td>
-                                    <td><c:out value="${app.fullname}" /></td>
+                                    <td><%=app.get(0)%></td>
+                                    <td><%=app.get(1)%></td>
+                                    <td><%=app.get(2)%></td>
+                                    <td><%=app.get(3)%></td>
+                                    <td><%=app.get(4)%></td>
+                                    <td><%=app.get(5)%></td>
                                     </tr>
                                 </tr>
-
+                                <%
+                                    }
+                                %>
                               </table>
                             </div>
-
-                                <br><br>
-                                <center><button type="submit" class="button"><a href="AppointmentServletU?action=insert">Set Appointment</a></button></center>
                                 </div>
   
                                 </center>

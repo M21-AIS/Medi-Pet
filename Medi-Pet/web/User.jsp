@@ -101,7 +101,7 @@ a {
 				<div class="container">
 					<div class="agile_banner_info">
                                         <button class="button button2"><a href="dispUPet.jsp">Pet</a></button>
-                                        <button class="button button2"><a href="href=AppointmentServletU?action=insert">Appointment</a></button>		
+                                        <button class="button button2"><a href="dispAppU.jsp">Appointment</a></button>		
                                         <button class="button button2"><a href="displayServiceU.jsp">Service</a></button>		
 					</div> 
 				</div>

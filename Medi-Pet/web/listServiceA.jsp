@@ -142,8 +142,6 @@ table:hover {
                               </table>
                             </div>
 
-                                <br><br>
-                                <center><button type="submit" class="button"><a href="AServiceServlet?action=insert">Add Service</a></button></center>
                                 </div>
   
                                 </center>

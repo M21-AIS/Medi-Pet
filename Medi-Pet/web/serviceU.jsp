@@ -116,13 +116,21 @@ span {
                                                         <div class="form-group">
                                                         <label for="serviceType" class="col-sm-2 control-label">Service Type<span>*</span></label>
 							<div class="col-sm-8">
-                                                            <input type="text" class="form-control1" name="serviceType" id="serviceType" value="<c:out value="${service.serviceType}" />" placeholder="Service Type">
+                                                        <label class="form-check-label">
+                                                            <h3 style="color: white">
+                                                          <input type="radio" class="form-check-input" name="serviceType" id="serviceType1" value="Boarding" checked="">
+                                                          Boarding &nbsp;&nbsp;&nbsp;&nbsp;
+                                                          <input type="radio" class="form-check-input" name="serviceType" id="serviceType2" value="Grooming">
+                                                            Grooming &nbsp;&nbsp;&nbsp;&nbsp;
+                                                          <input type="radio" class="form-check-input" name="serviceType" id="serviceType3" value="Vaccination">
+                                                            Vaccination</h3>
+                                                          </label>
                                                         </div>
                                                         </div>
                                                         <div class="form-group">
                                                         <label for="petType" class="col-sm-2 control-label">Pet Type<span>*</span></label>
 							<div class="col-sm-8">
-                                                            <input type="text" class="form-control1" name="petType" id="petType" value="<c:out value="${service.petType}" />" placeholder="Service Type">
+                                                            <input type="text" class="form-control1" name="petType" id="petType" value="<c:out value="${service.petType}" />" placeholder="Pet Type">
                                                         </div>
                                                         </div>
                                                         <div class="form-group">

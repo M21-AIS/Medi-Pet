@@ -132,11 +132,20 @@ span {
                                                         </div>
                                                         </div>
                                                         <div class="form-group">
-							<label for="status" class="col-sm-2 control-label">Status<span>*</span></label>
+                                                        <label for="status" class="col-sm-2 control-label">Status<span>*</span></label>
 							<div class="col-sm-8">
-                                                            <input type="text" class="form-control1" name="status" id="status" value="<c:out value="${service.status}"/>" placeholder="Status">
-							</div>
+                                                        <label class="form-check-label">
+                                                            <h3 style="color: white">
+                                                          <input type="radio" class="form-check-input" name="status" id="status1" value="Pending" checked="">
+                                                          Pending &nbsp;&nbsp;&nbsp;&nbsp;
+                                                          <input type="radio" class="form-check-input" name="status" id="status2" value="InProgress">
+                                                            In Progress &nbsp;&nbsp;&nbsp;&nbsp;
+                                                          <input type="radio" class="form-check-input" name="status" id="status3" value="Completed">
+                                                            Completed</h3>
+                                                          </label>
                                                         </div>
+                                                        </div>
+                                                        
                                                               
 						<button type="submit" class="button">Submit</button>	
 						</form>
