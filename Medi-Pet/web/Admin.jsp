@@ -116,7 +116,7 @@ a {
 				<div class="container">
 					<div class="agile_banner_info">
                                         <button class="button button2"><a href="dispAPet.jsp">Pet List</a></button>
-                                        <button class="button button2"><a href="appAPet.jsp">View Appointment</a></button>		
+                                        <button class="button button2"><a href="dispAppA.jsp">View Appointment</a></button>		
                                         <button class="button button2"><a href="appAPet.jsp">View Service</a></button>		
 					</div> 
 				</div>

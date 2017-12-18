@@ -212,14 +212,33 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<div class="resp-tabs-container">
 								<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
 									<div class="agileits-login">
-										<form action="#" method="post">
-											<input type="email" class="email" name="Email" placeholder="Email" required=""/>
-											<input type="password" class="password" name="Password" placeholder="Password" required=""/>
+                                                                              <%
+                                                                                Cookie[] cookies = request.getCookies();
+                                                                                String username="";
+                                                                                String password = "";
+                                                                                if(cookies!=null)
+                                                                                {
+                                                                                  for(int i=0;i<cookies.length;i++){
+                                                                                    Cookie cookie = cookies[i];
+                                                                                    if(cookie.getName().equals("username-cookie"))
+                                                                                    {
+                                                                                        username= cookie.getValue();
+                                                                                    }
+                                                                                    else if(cookie.getName().equals("password-cookie"))
+                                                                                    {
+                                                                                        password= cookie.getValue();
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                               %>
+										<form name="form" action="<%=request.getContextPath()%>/LoginServlet" method="post">
+											<input type="text" class="username" name="username" placeholder="Username" required=""/>
+											<input type="password" class="password" name="password" placeholder="Password" required=""/>
 											<div class="wthree-text"> 
 												<ul> 
 													<li>
 														<label class="anim">
-															<input type="checkbox" class="checkbox">
+															<input type="checkbox" class="checkbox" name="rememberMe" value ="true"/>
 															<span> Remember me ?</span> 
 														</label> 
 													</li>
@@ -236,14 +255,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
 									<div class="login-top sign-top">
 										<div class="agileits-login">
-											<form action="#" method="post">
-												<input type="text" name="Username" placeholder="Username" required="">
-												<input type="email" class="email" name="Email" placeholder="Email" required=""/>
-												<input type="password" class="password" name="Password" placeholder="Password" required=""/>	
-												<label class="anim">
-													<input type="checkbox" class="checkbox">
-													<span> I accept the terms of use</span> 
-												</label> 
+											<form name="form" action="<%=request.getContextPath()%>/RegisterServlet" method="post" onsubmit="return validate()">
+												<input type="text" name="fullname" placeholder="Fullname" required="">
+												<input type="email" class="email" name="email" placeholder="Email" required=""/>
+                                                                                                <input type="text" name="username" placeholder="Username" required=""/> 
+												<input type="password" class="password" name="password" placeholder="Password" required=""/>	
+                                                                                                <input type="password" class="password" name="conpassword" placeholder="Confirm Password" required=""/>
+                                                                                                <center><input type="radio" name="role" value="Admin"> Admin &nbsp;&nbsp;&nbsp; <input type="radio" name="role" value="User"> User</center>
+                                                                                                <br>
+                                                                                                <label class="anim">
+                                                                                                    <input type="checkbox" class="checkbox">
+                                                                                                    <span> I accept the terms of use</span> 
+												</label>
+                                                                                                <br>
+                                                                                                <%=(request.getAttribute("errMessage") == null) ? "" : request.getAttribute("errMessage")%>
 												<div class="w3ls-submit"> 
 													<input class="register" type="submit" value="REGISTER">  
 												</div>
@@ -259,7 +284,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>
 		</div>
 	</div>
-	<!-- //modal sign in -->  
+	<!-- //modal sign in -->   
 	<!-- js --> 
 	<script src="js/jquery-2.2.3.min.js"></script>  
 	<!-- //js -->  
