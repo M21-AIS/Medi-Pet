@@ -60,7 +60,7 @@ public class AppointmentServletA extends HttpServlet {
         app.setTypeVacc(request.getParameter("typeVacc"));
         app.setFullname(request.getParameter("fullname"));
         app.setName(request.getParameter("name"));
-        
+        String[] typeVacc = request.getParameterValues("typeVacc");
         String appNo = request.getParameter("appNo");
         if( appNo == null || appNo.isEmpty())
         {

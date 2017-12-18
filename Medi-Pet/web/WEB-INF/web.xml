@@ -37,6 +37,12 @@
     <welcome-file-list>
         <welcome-file>/dispAppU.jsp</welcome-file>
     </welcome-file-list>
+    <welcome-file-list>
+        <welcome-file>/dispServiceA.jsp</welcome-file>
+    </welcome-file-list>
+    <welcome-file-list>
+        <welcome-file>/dispServiceU.jsp</welcome-file>
+    </welcome-file-list>
     <servlet>
         <display-name>LogoutServlet</display-name>
         <servlet-name>LogoutServlet</servlet-name>
@@ -79,5 +85,23 @@
     <servlet-mapping>
         <servlet-name>AppointmentServletU</servlet-name>
         <url-pattern>/AppointmentServletU</url-pattern>
-    </servlet-mapping>   
+    </servlet-mapping> 
+    <servlet>
+        <description/>
+        <servlet-name>AServiceServlet</servlet-name>
+        <servlet-class>servlet.AServiceServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AServiceServlet</servlet-name>
+        <url-pattern>/AServiceServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <description/>
+        <servlet-name>UServiceServlet</servlet-name>
+        <servlet-class>servlet.UServiceServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UServiceServlet</servlet-name>
+        <url-pattern>/UServiceServlet</url-pattern>
+    </servlet-mapping>  
 </web-app>

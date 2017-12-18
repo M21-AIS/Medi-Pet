@@ -1,14 +1,14 @@
 <%-- 
-    Document   : Admin
-    Created on : Dec 10, 2017, 10:32:39 PM
-    Author     : User
+    Document   : serviceA
+    Created on : 18-Dec-2017, 10:18:00
+    Author     : user
 --%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Admin Page</title>
+<title>Add Service</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Best Pets Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -26,27 +26,36 @@
 <!-- //web-fonts -->
 <style>
 .button {
-    background-color: #FF7F50; 
+    background-color: #FF7F50;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 16px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
-    cursor: pointer;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
-    width: 200px;
+    cursor: pointer;
+    border-radius: 12px;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #FF7F50;
 }
 
-.button2:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-}
-
-a {
+.button:hover {
+    background-color: #FF7F50;
     color: white;
+}
+
+.control-label{
+    font-size: 20px;
+    color : white;
+}
+
+span {
+    color : red;
 }
 </style>
 </head>
@@ -62,21 +71,21 @@ a {
 							<h1><a href="index.jsp">Medi Pet</a></h1> 
 						</div>
 						<div class="agileits_w3layouts_sign_in">
-                                                    <%
-                                                    String username=request.getParameter("username");
-                                                    String password=request.getParameter("password");
-                                                    String message= username;
-                                                    String rememberMe=  request.getParameter("rememberMe");
-                                                    if(rememberMe!=null)
-                                                    {
-                                                        Cookie usernameCookie = new Cookie("username-cookie", username);
-                                                        Cookie passwordCookie = new Cookie("password-cookie", username);
-                                                        usernameCookie.setMaxAge(24*60*60);
-                                                        passwordCookie.setMaxAge(24*60*60);
-                                                        response.addCookie(usernameCookie);
-                                                        response.addCookie(passwordCookie);
-                                                        }
-                                                    %>  
+							<%
+                                                        String username=request.getParameter("username");
+                                                        String password=request.getParameter("password");
+                                                        String message= username;
+                                                        String rememberMe=  request.getParameter("rememberMe");
+                                                        if(rememberMe!=null)
+                                                        {
+                                                            Cookie usernameCookie = new Cookie("username-cookie", username);
+                                                            Cookie passwordCookie = new Cookie("password-cookie", username);
+                                                            usernameCookie.setMaxAge(24*60*60);
+                                                            passwordCookie.setMaxAge(24*60*60);
+                                                            response.addCookie(usernameCookie);
+                                                            response.addCookie(passwordCookie);
+                                                            }
+                                                        %>  
 							<ul>
                                                             <li>WELCOME : <%= message%></li>
                                                             <li>|</li>
@@ -114,11 +123,43 @@ a {
 			<!-- banner-text -->
 			<div class="banner-text agileinfo"> 
 				<div class="container">
-					<div class="agile_banner_info">
-                                        <button class="button button2"><a href="dispAPet.jsp">Pet</a></button>
-                                        <button class="button button2"><a href="dispAppA.jsp">Appointment</a></button>		
-                                        <button class="button button2"><a href="dispServiceA.jsp">Service</a></button>		
-					</div> 
+                                <center>
+                                <h3 class="w3ls-hdg">Service Registration</h3>
+				<div class="tab-content">
+					<div class="tab-pane active" id="horizontal-form">
+						<form class="form-horizontal" action="AServiceServlet" method="post">
+							<div class="form-group">
+							<label for="serviceNo" class="col-sm-2 control-label">Service No</label>
+							<div class="col-sm-8">
+                                                            <input type="text" class="form-control1" name="serviceNo" id="serviceNo" readonly="readonly" value="<c:out value="${service.serviceNo}"/>" placeholder="Service No">
+							</div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                        <label for="serviceType" class="col-sm-2 control-label">Service Type<span>*</span></label>
+							<div class="col-sm-8">
+                                                            <input type="text" class="form-control1" name="serviceType" id="serviceType" value="<c:out value="${service.serviceType}" />" placeholder="Service Type">
+                                                        </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                        <label for="petType" class="col-sm-2 control-label">Pet Type<span>*</span></label>
+							<div class="col-sm-8">
+                                                            <input type="text" class="form-control1" name="petType" id="petType" value="<c:out value="${service.petType}" />" placeholder="Pet Type">
+                                                        </div>
+                                                        </div>
+                                                        <div class="form-group">
+							<label for="status" class="col-sm-2 control-label">Status<span>*</span></label>
+							<div class="col-sm-8">
+                                                            <input type="text" class="form-control1" name="status" id="status" value="<c:out value="${service.status}"/>" placeholder="Status">
+							</div>
+                                                        </div>
+                                                              
+						<button type="submit" class="button">Submit</button>	
+						</form>
+                                        </div>
+                                    </div>
+                                </center>
+				</div>
+				</div>
 				</div>
 			</div>
 			<!-- //banner-text -->  

@@ -1,14 +1,21 @@
 <%-- 
-    Document   : Admin
-    Created on : Dec 10, 2017, 10:32:39 PM
+    Document   : listServiceU
+    Created on : Dec 13, 2017, 4:17:14 PM
     Author     : User
 --%>
+
+<%-- 
+    Document   : listServiceA
+    Created on : Dec 13, 2017, 4:17:14 PM
+    Author     : User
+--%>
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Admin Page</title>
+<title>View Service</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Best Pets Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -19,6 +26,7 @@
 <link href="css/style.css" type="text/css" rel="stylesheet" media="all">   
 <link href="css/font-awesome.css" rel="stylesheet"> <!-- font-awesome icons -->
 <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <!-- //Custom Theme files -->  
 <!-- web-fonts -->   
 <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
@@ -26,27 +34,40 @@
 <!-- //web-fonts -->
 <style>
 .button {
-    background-color: #FF7F50; 
+    background-color: #FF7F50;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 16px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
-    cursor: pointer;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
-    width: 200px;
+    cursor: pointer;
+    border-radius: 12px;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #FF7F50;
 }
 
-.button2:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-}
-
-a {
+.button:hover {
+    background-color: #FF7F50;
     color: white;
+}
+
+.control-label{
+    font-size: 20px;
+    color : white;
+}
+
+h1 {
+    color: white;
+}
+
+table:hover {
+    background-color: lightgray;
 }
 </style>
 </head>
@@ -62,21 +83,21 @@ a {
 							<h1><a href="index.jsp">Medi Pet</a></h1> 
 						</div>
 						<div class="agileits_w3layouts_sign_in">
-                                                    <%
-                                                    String username=request.getParameter("username");
-                                                    String password=request.getParameter("password");
-                                                    String message= username;
-                                                    String rememberMe=  request.getParameter("rememberMe");
-                                                    if(rememberMe!=null)
-                                                    {
-                                                        Cookie usernameCookie = new Cookie("username-cookie", username);
-                                                        Cookie passwordCookie = new Cookie("password-cookie", username);
-                                                        usernameCookie.setMaxAge(24*60*60);
-                                                        passwordCookie.setMaxAge(24*60*60);
-                                                        response.addCookie(usernameCookie);
-                                                        response.addCookie(passwordCookie);
-                                                        }
-                                                    %>  
+							<%
+                                                        String username=request.getParameter("username");
+                                                        String password=request.getParameter("password");
+                                                        String message= username;
+                                                        String rememberMe=  request.getParameter("rememberMe");
+                                                        if(rememberMe!=null)
+                                                        {
+                                                            Cookie usernameCookie = new Cookie("username-cookie", username);
+                                                            Cookie passwordCookie = new Cookie("password-cookie", username);
+                                                            usernameCookie.setMaxAge(24*60*60);
+                                                            passwordCookie.setMaxAge(24*60*60);
+                                                            response.addCookie(usernameCookie);
+                                                            response.addCookie(passwordCookie);
+                                                            }
+                                                        %>  
 							<ul>
                                                             <li>WELCOME : <%= message%></li>
                                                             <li>|</li>
@@ -113,17 +134,42 @@ a {
 			<!-- //header --> 
 			<!-- banner-text -->
 			<div class="banner-text agileinfo"> 
-				<div class="container">
-					<div class="agile_banner_info">
-                                        <button class="button button2"><a href="dispAPet.jsp">Pet</a></button>
-                                        <button class="button button2"><a href="dispAppA.jsp">Appointment</a></button>		
-                                        <button class="button button2"><a href="dispServiceA.jsp">Service</a></button>		
-					</div> 
+                                <center>
+                                <div class="w3-container w3-centered">
+                                <h1><center>Service List</center></h1>
+                                <br><br>
+                              <table class="w3-table w3-bordered">
+                                <thead>
+                                  <tr class="w3-red">
+                                    <th scope="col">Service No</th>
+                                    <th>Service Type</th>
+                                    <th>Pet Type</th>
+                                    <th>Status</th>
+                                    <th colspan="2">Action</th>
+                                  </tr>
+                                </thead>
+                                <c:forEach items="${services}" var="service">
+                                    <tr class="w3-white">
+                                    <td><c:out value="${service.serviceNo}" /></td>
+                                    <td><c:out value="${service.serviceType}" /></td>
+                                    <td><c:out value="${service.petType}" /></td>
+                                    <td><c:out value="${service.status}" /></td>
+                                    <td><a href="AServiceServlet?action=delete&serviceNo=<c:out value="${service.serviceNo}"/>">Delete</a></td>
+                                    </tr>
+                                </c:forEach>
+                                </tr>
+
+                              </table>
+                            </div>
+
+                                <br><br>
+                                <center><button type="submit" class="button"><a href="UServiceServlet?action=insert">Add Service</a></button></center>
+                                </div>
+  
+                                </center>
 				</div>
-			</div>
-			<!-- //banner-text -->  
-		</div>	
-	</div>	
+				</div>
+			<!-- //banner-text -->  	
 	<!-- //banner -->
 	<!-- js --> 
 	<script src="js/jquery-2.2.3.min.js"></script>  

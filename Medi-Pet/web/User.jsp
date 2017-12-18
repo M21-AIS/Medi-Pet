@@ -115,9 +115,9 @@ a {
 			<div class="banner-text agileinfo"> 
 				<div class="container">
 					<div class="agile_banner_info">
-                                        <button class="button button2"><a href="dispUPet.jsp">Pet List</a></button>
-                                        <button class="button button2"><a href="appUPet.jsp">Book Appointment</a></button>		
-                                        <button class="button button2"><a href="appUPet.jsp">Book Service</a></button>		
+                                        <button class="button button2"><a href="dispUPet.jsp">Pet</a></button>
+                                        <button class="button button2"><a href="dispAppU.jsp">Appointment</a></button>		
+                                        <button class="button button2"><a href="dispServiceU.jsp">Service</a></button>		
 					</div> 
 				</div>
 			</div>
