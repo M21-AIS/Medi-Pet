@@ -38,10 +38,10 @@
         <welcome-file>/dispAppU.jsp</welcome-file>
     </welcome-file-list>
     <welcome-file-list>
-        <welcome-file>/dispServiceA.jsp</welcome-file>
+        <welcome-file>/displayServiceA.jsp</welcome-file>
     </welcome-file-list>
     <welcome-file-list>
-        <welcome-file>/dispServiceU.jsp</welcome-file>
+        <welcome-file>/displayServiceU.jsp</welcome-file>
     </welcome-file-list>
     <servlet>
         <display-name>LogoutServlet</display-name>

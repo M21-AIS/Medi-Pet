@@ -76,23 +76,8 @@ table:hover {
 							<h1><a href="index.jsp">Medi Pet</a></h1> 
 						</div>
 						<div class="agileits_w3layouts_sign_in">
-							<%
-                                                        String username=request.getParameter("username");
-                                                        String password=request.getParameter("password");
-                                                        String message= username;
-                                                        String rememberMe=  request.getParameter("rememberMe");
-                                                        if(rememberMe!=null)
-                                                        {
-                                                            Cookie usernameCookie = new Cookie("username-cookie", username);
-                                                            Cookie passwordCookie = new Cookie("password-cookie", username);
-                                                            usernameCookie.setMaxAge(24*60*60);
-                                                            passwordCookie.setMaxAge(24*60*60);
-                                                            response.addCookie(usernameCookie);
-                                                            response.addCookie(passwordCookie);
-                                                            }
-                                                        %>  
 							<ul>
-                                                            <li>WELCOME : <%= message%></li>
+                                                            <li>Welcome <%=request.getAttribute("userName") %></li>
                                                             <li>|</li>
                                                             <li><a href="<%=request.getContextPath()%>/LogoutServlet" data-toggle="modal" class="play-icon">Logout</a></li>
                                                             <li>Call us : <span>(+07) 553 0070</span></li>
@@ -143,7 +128,6 @@ table:hover {
                                     
                                   </tr>
                                 </thead>
-                                <c:forEach items="${apps}" var="app">
                                     <tr class="w3-white">
                                     <td><c:out value="${app.appNo}" /></td>
                                     <td><c:out value="${app.name}" /></td>
@@ -152,7 +136,6 @@ table:hover {
                                     <td><c:out value="${app.typeVacc}" /></td>
                                     <td><c:out value="${app.fullname}" /></td>
                                     </tr>
-                                </c:forEach>
                                 </tr>
 
                               </table>

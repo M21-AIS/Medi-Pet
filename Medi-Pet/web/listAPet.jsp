@@ -77,7 +77,7 @@ table:hover {
 						</div>
 						<div class="agileits_w3layouts_sign_in">
 							<ul>
-                                                            <li>WELCOME : <%=session.getAttribute("username")%></li>
+                                                            <li>Welcome <%=request.getAttribute("userName") %></li>
                                                             <li>|</li>
                                                             <li><a href="<%=request.getContextPath()%>/LogoutServlet" data-toggle="modal" class="play-icon">Logout</a></li>
                                                             <li>Call us : <span>(+07) 553 0070</span></li>

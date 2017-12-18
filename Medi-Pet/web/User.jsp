@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Admin Page</title>
+<title>User Page</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Best Pets Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -62,23 +62,8 @@ a {
 							<h1><a href="index.jsp">Medi Pet</a></h1> 
 						</div>
 						<div class="agileits_w3layouts_sign_in">
-                                                            <%
-                                                            String username=request.getParameter("username");
-                                                            String password=request.getParameter("password");
-                                                            String message= username;
-                                                            String rememberMe=  request.getParameter("rememberMe");
-                                                            if(rememberMe!=null)
-                                                            {
-                                                                Cookie usernameCookie = new Cookie("username-cookie", username);
-                                                                Cookie passwordCookie = new Cookie("password-cookie", username);
-                                                                usernameCookie.setMaxAge(24*60*60);
-                                                                passwordCookie.setMaxAge(24*60*60);
-                                                                response.addCookie(usernameCookie);
-                                                                response.addCookie(passwordCookie);
-                                                                }
-                                                            %>  
-							<ul>
-                                                            <li>WELCOME : <%= message%></li>
+                                                        <ul>
+                                                            <li>Welcome <%=request.getAttribute("userName") %></li>
                                                             <li>|</li>
                                                             <li><a href="<%=request.getContextPath()%>/LogoutServlet" data-toggle="modal" class="play-icon">Logout</a></li>
                                                             <li>Call us : <span>(+07) 553 0070</span></li>
@@ -116,8 +101,8 @@ a {
 				<div class="container">
 					<div class="agile_banner_info">
                                         <button class="button button2"><a href="dispUPet.jsp">Pet</a></button>
-                                        <button class="button button2"><a href="dispAppU.jsp">Appointment</a></button>		
-                                        <button class="button button2"><a href="dispServiceU.jsp">Service</a></button>		
+                                        <button class="button button2"><a href="href=AppointmentServletU?action=insert">Appointment</a></button>		
+                                        <button class="button button2"><a href="displayServiceU.jsp">Service</a></button>		
 					</div> 
 				</div>
 			</div>

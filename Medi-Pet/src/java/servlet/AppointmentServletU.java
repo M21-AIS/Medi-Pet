@@ -46,7 +46,9 @@ public class AppointmentServletU extends HttpServlet {
             forward = INSERT_OR_EDIT;     
         } else {
             forward = LIST_APP;
-            request.setAttribute("apps", dao.getAllApp());
+            int appNo = Integer.parseInt(request.getParameter("appNo"));
+            Appointment app = dao.getAppByAppNo(appNo);
+            request.setAttribute("app", app);
         }
 
         RequestDispatcher view = request.getRequestDispatcher(forward);
