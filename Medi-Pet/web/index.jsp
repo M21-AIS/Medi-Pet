@@ -368,6 +368,25 @@ function validate()
 							<div class="resp-tabs-container">
 								<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
 									<div class="agileits-login">
+                                                                              <%
+                                                                                Cookie[] cookies = request.getCookies();
+                                                                                String username="";
+                                                                                String password = "";
+                                                                                if(cookies!=null)
+                                                                                {
+                                                                                  for(int i=0;i<cookies.length;i++){
+                                                                                    Cookie cookie = cookies[i];
+                                                                                    if(cookie.getName().equals("username-cookie"))
+                                                                                    {
+                                                                                        username= cookie.getValue();
+                                                                                    }
+                                                                                    else if(cookie.getName().equals("password-cookie"))
+                                                                                    {
+                                                                                        password= cookie.getValue();
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                               %>
 										<form name="form" action="<%=request.getContextPath()%>/LoginServlet" method="post">
 											<input type="text" class="username" name="username" placeholder="Username" required=""/>
 											<input type="password" class="password" name="password" placeholder="Password" required=""/>
@@ -375,7 +394,7 @@ function validate()
 												<ul> 
 													<li>
 														<label class="anim">
-															<input type="checkbox" class="checkbox">
+															<input type="checkbox" class="checkbox" name="rememberMe" value ="true"/>
 															<span> Remember me ?</span> 
 														</label> 
 													</li>
